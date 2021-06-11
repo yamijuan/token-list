@@ -1,0 +1,42 @@
+{
+  "name": "@raydium-io/token-list",
+  "version": "1.0.0",
+  "description": "Raydium token list",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/sdk.esm.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/raydium-io/token-list.git",
+  "keywords": [
+    "raydium",
+    "solana"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src}/**/*.ts": [
+      "yarn lint"
+    ]
+  },
+  "scripts": {
+    "lint": "tsdx lint src",
+    "build": "tsdx build",
+    "make": "tsdx build",
+    "start": "tsdx watch"
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "tsdx": "^0.14.1"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}
