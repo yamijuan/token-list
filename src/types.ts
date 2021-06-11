@@ -16,7 +16,7 @@ export type Socials = {
   [key in SocialKey]?: string;
 };
 
-// Wrapped SOL
+// SPL token
 export interface SplTokenInfo extends NativeTokenInfo {
   readonly mint: string;
 
