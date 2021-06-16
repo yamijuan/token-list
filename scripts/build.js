@@ -1,8 +1,7 @@
-import fs from 'fs';
+const fs = require('fs');
+const { SPL_TOKENS } = require('../dist');
 
-import { SPL_TOKENS, SplTokenInfo } from '../src';
-
-const TOKENS: SplTokenInfo[] = [];
+const TOKENS = [];
 
 Object.keys(SPL_TOKENS).forEach((symbol) => {
   TOKENS.push(SPL_TOKENS[symbol]);

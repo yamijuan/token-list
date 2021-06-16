@@ -26,7 +26,7 @@
   "scripts": {
     "lint": "tsdx lint src",
     "build": "tsdx build",
-    "json": "ts-node scripts/build.ts",
+    "json": "node scripts/build.js",
     "start": "tsdx watch"
   },
   "peerDependencies": {},
@@ -34,7 +34,6 @@
   "devDependencies": {
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "ts-node": "^10.0.0",
     "tsdx": "^0.14.1"
   },
   "engines": {
