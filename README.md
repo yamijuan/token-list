@@ -4,5 +4,5 @@
 
 ## Links
 
-- https://raw.githubusercontent.com/raydium-io/token-list/master/dist/tokens.json
-- https://cdn.jsdelivr.net/gh/raydium-io/token-list@master/dist/tokens.json
+- https://raw.githubusercontent.com/raydium-io/token-list/master/json/tokens.json
+- https://cdn.jsdelivr.net/gh/raydium-io/token-list@master/json/tokens.json

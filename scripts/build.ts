@@ -8,7 +8,7 @@ Object.keys(SPL_TOKENS).forEach((symbol) => {
   TOKENS.push(SPL_TOKENS[symbol]);
 });
 
-const dist = './dist';
+const dist = './json';
 
 if (!fs.existsSync(dist)) {
   fs.mkdirSync(dist);

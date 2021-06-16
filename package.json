@@ -1,6 +1,6 @@
 {
   "name": "@raydium-io/token-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Raydium token list",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -26,7 +26,7 @@
   "scripts": {
     "lint": "tsdx lint src",
     "build": "tsdx build",
-    "make": "ts-node scripts/build.ts",
+    "json": "ts-node scripts/build.ts",
     "start": "tsdx watch"
   },
   "peerDependencies": {},
