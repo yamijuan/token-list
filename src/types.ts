@@ -32,12 +32,16 @@ export interface SplTokens {
   [key: string]: SplTokenInfo;
 }
 
-// LP tokens
+// LP token
 export interface LpTokenInfo extends NativeTokenInfo {
   readonly mint: string;
-
-  readonly baseMint: string;
-  readonly quoteMint: string;
+  readonly coin: SplTokenInfo;
+  readonly pc: SplTokenInfo;
 
   readonly version: 2 | 3 | 4;
+}
+
+// LP tokens
+export interface LpTokens {
+  [key: string]: LpTokenInfo;
 }

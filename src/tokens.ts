@@ -1,8 +1,9 @@
-import { LpTokenInfo, NativeTokenInfo, SplTokenInfo, SplTokens } from './types';
+import { LpTokens, SplTokenInfo, SplTokens } from './types';
 
-export const SOL: NativeTokenInfo = {
+export const SOL: SplTokenInfo = {
   symbol: 'SOL',
   name: 'Solana',
+  mint: '11111111111111111111111111111111',
   decimals: 9
 };
 
@@ -322,4 +323,507 @@ export const SPL_TOKENS: SplTokens = {
   }
 };
 
-export const LP_TOKENS: LpTokenInfo[] = [];
+export const LP_TOKENS: LpTokens = {
+  'RAY-WUSDT': {
+    symbol: 'RAY-WUSDT',
+    name: 'RAY-WUSDT V2 LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.WUSDT },
+
+    mint: 'CzPDyvotTcxNqtPne32yUiEVQ6jk42HZi1Y3hUu7qf7f',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 2
+  },
+  'RAY-SOL': {
+    symbol: 'RAY-SOL',
+    name: 'RAY-SOL LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SOL },
+
+    mint: '134Cct3CSdRCbYgq5SkwmHgfwjJ7EM5cG9PzqffWqECx',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 2
+  },
+  'LINK-WUSDT': {
+    symbol: 'LINK-WUSDT',
+    name: 'LINK-WUSDT LP',
+    coin: { ...SPL_TOKENS.LINK },
+    pc: { ...SPL_TOKENS.WUSDT },
+
+    mint: 'EVDmwajM5U73PD34bYPugwiA4Eqqbrej4mLXXv15Z5qR',
+    decimals: SPL_TOKENS.LINK.decimals,
+    version: 2
+  },
+  'ETH-WUSDT': {
+    symbol: 'ETH-WUSDT',
+    name: 'ETH-WUSDT LP',
+    coin: { ...SPL_TOKENS.ETH },
+    pc: { ...SPL_TOKENS.WUSDT },
+
+    mint: 'KY4XvwHy7JPzbWYAbk23jQvEb4qWJ8aCqYWREmk1Q7K',
+    decimals: SPL_TOKENS.ETH.decimals,
+    version: 2
+  },
+  'RAY-USDC': {
+    symbol: 'RAY-USDC',
+    name: 'RAY-USDC LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'FgmBnsF5Qrnv8X9bomQfEtQTQjNNiBCWRKGpzPnE5BDg',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 2
+  },
+  'RAY-SRM': {
+    symbol: 'RAY-SRM',
+    name: 'RAY-SRM LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: '5QXBMXuCL7zfAk39jEVVEvcrz1AvBGgT9wAhLLHLyyUJ',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 2
+  },
+  // v3
+  'RAY-WUSDT-V3': {
+    symbol: 'RAY-WUSDT',
+    name: 'RAY-WUSDT V3 LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.WUSDT },
+    mint: 'FdhKXYjCou2jQfgKWcNY7jb8F2DPLU1teTTTRfLBD2v1',
+
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 3
+  },
+  'RAY-USDC-V3': {
+    symbol: 'RAY-USDC',
+    name: 'RAY-USDC LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'BZFGfXMrjG2sS7QT2eiCDEevPFnkYYF7kzJpWfYxPbcx',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 3
+  },
+  'RAY-SRM-V3': {
+    symbol: 'RAY-SRM',
+    name: 'RAY-SRM LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: 'DSX5E21RE9FB9hM8Nh8xcXQfPK6SzRaJiywemHBSsfup',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 3
+  },
+  'RAY-SOL-V3': {
+    symbol: 'RAY-SOL',
+    name: 'RAY-SOL LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SOL },
+
+    mint: 'F5PPQHGcznZ2FxD9JaxJMXaf7XkaFFJ6zzTBcW8osQjw',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 3
+  },
+  'RAY-ETH-V3': {
+    symbol: 'RAY-ETH',
+    name: 'RAY-ETH LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.ETH },
+
+    mint: '8Q6MKy5Yxb9vG1mWzppMtMb2nrhNuCRNUkJTeiE3fuwD',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 3
+  },
+  // v4
+  'FIDA-RAY-V4': {
+    symbol: 'FIDA-RAY',
+    name: 'FIDA-RAY LP',
+    coin: { ...SPL_TOKENS.FIDA },
+    pc: { ...SPL_TOKENS.RAY },
+
+    mint: 'DsBuznXRTmzvEdb36Dx3aVLVo1XmH7r1PRZUFugLPTFv',
+    decimals: SPL_TOKENS.FIDA.decimals,
+    version: 4
+  },
+  'OXY-RAY-V4': {
+    symbol: 'OXY-RAY',
+    name: 'OXY-RAY LP',
+    coin: { ...SPL_TOKENS.OXY },
+    pc: { ...SPL_TOKENS.RAY },
+
+    mint: 'FwaX9W7iThTZH5MFeasxdLpxTVxRcM7ZHieTCnYog8Yb',
+    decimals: SPL_TOKENS.OXY.decimals,
+    version: 4
+  },
+  'MAPS-RAY-V4': {
+    symbol: 'MAPS-RAY',
+    name: 'MAPS-RAY LP',
+    coin: { ...SPL_TOKENS.MAPS },
+    pc: { ...SPL_TOKENS.RAY },
+
+    mint: 'CcKK8srfVdTSsFGV3VLBb2YDbzF4T4NM2C3UEjC39RLP',
+    decimals: SPL_TOKENS.MAPS.decimals,
+    version: 4
+  },
+  'KIN-RAY-V4': {
+    symbol: 'KIN-RAY',
+    name: 'KIN-RAY LP',
+    coin: { ...SPL_TOKENS.KIN },
+    pc: { ...SPL_TOKENS.RAY },
+
+    mint: 'CHT8sft3h3gpLYbCcZ9o27mT5s3Z6VifBVbUiDvprHPW',
+    decimals: 6,
+    version: 4
+  },
+  'RAY-USDT-V4': {
+    symbol: 'RAY-USDT',
+    name: 'RAY-USDT LP',
+    coin: { ...SPL_TOKENS.RAY },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'C3sT1R3nsw4AVdepvLTLKr5Gvszr7jufyBWUCvy4TUvT',
+    decimals: SPL_TOKENS.RAY.decimals,
+    version: 4
+  },
+  'SOL-USDC-V4': {
+    symbol: 'SOL-USDC',
+    name: 'SOL-USDC LP',
+    coin: { ...SOL },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '8HoQnePLqPj4M7PUDzfw8e3Ymdwgc7NLGnaTUapubyvu',
+    decimals: SOL.decimals,
+    version: 4
+  },
+  'YFI-USDC-V4': {
+    symbol: 'YFI-USDC',
+    name: 'YFI-USDC LP',
+    coin: { ...SPL_TOKENS.YFI },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '865j7iMmRRycSYUXzJ33ZcvLiX9JHvaLidasCyUyKaRE',
+    decimals: SPL_TOKENS.YFI.decimals,
+    version: 4
+  },
+  'SRM-USDC-V4': {
+    symbol: 'SRM-USDC',
+    name: 'SRM-USDC LP',
+    coin: { ...SPL_TOKENS.SRM },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '9XnZd82j34KxNLgQfz29jGbYdxsYznTWRpvZE3SRE7JG',
+    decimals: SPL_TOKENS.SRM.decimals,
+    version: 4
+  },
+  'FTT-USDC-V4': {
+    symbol: 'FTT-USDC',
+    name: 'FTT-USDC LP',
+    coin: { ...SPL_TOKENS.FTT },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '75dCoKfUHLUuZ4qEh46ovsxfgWhB4icc3SintzWRedT9',
+    decimals: SPL_TOKENS.FTT.decimals,
+    version: 4
+  },
+  'BTC-USDC-V4': {
+    symbol: 'BTC-USDC',
+    name: 'BTC-USDC LP',
+    coin: { ...SPL_TOKENS.BTC },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '2hMdRdVWZqetQsaHG8kQjdZinEMBz75vsoWTCob1ijXu',
+    decimals: SPL_TOKENS.BTC.decimals,
+    version: 4
+  },
+  'SUSHI-USDC-V4': {
+    symbol: 'SUSHI-USDC',
+    name: 'SUSHI-USDC LP',
+    coin: { ...SPL_TOKENS.SUSHI },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '2QVjeR9d2PbSf8em8NE8zWd8RYHjFtucDUdDgdbDD2h2',
+    decimals: SPL_TOKENS.SUSHI.decimals,
+    version: 4
+  },
+  'TOMO-USDC-V4': {
+    symbol: 'TOMO-USDC',
+    name: 'TOMO-USDC LP',
+    coin: { ...SPL_TOKENS.TOMO },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'CHyUpQFeW456zcr5XEh4RZiibH8Dzocs6Wbgz9aWpXnQ',
+    decimals: SPL_TOKENS.TOMO.decimals,
+    version: 4
+  },
+  'LINK-USDC-V4': {
+    symbol: 'LINK-USDC',
+    name: 'LINK-USDC LP',
+    coin: { ...SPL_TOKENS.LINK },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'BqjoYjqKrXtfBKXeaWeAT5sYCy7wsAYf3XjgDWsHSBRs',
+    decimals: SPL_TOKENS.LINK.decimals,
+    version: 4
+  },
+  'ETH-USDC-V4': {
+    symbol: 'ETH-USDC',
+    name: 'ETH-USDC LP',
+    coin: { ...SPL_TOKENS.ETH },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '13PoKid6cZop4sj2GfoBeujnGfthUbTERdE5tpLCDLEY',
+    decimals: SPL_TOKENS.ETH.decimals,
+    version: 4
+  },
+  'xCOPE-USDC-V4': {
+    symbol: 'xCOPE-USDC',
+    name: 'xCOPE-USDC LP',
+    coin: { ...SPL_TOKENS.xCOPE },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '2Vyyeuyd15Gp8aH6uKE72c4hxc8TVSLibxDP9vzspQWG',
+    decimals: SPL_TOKENS.xCOPE.decimals,
+    version: 4
+  },
+  'SOL-USDT-V4': {
+    symbol: 'SOL-USDT',
+    name: 'SOL-USDT LP',
+    coin: { ...SOL },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'Epm4KfTj4DMrvqn6Bwg2Tr2N8vhQuNbuK8bESFp4k33K',
+    decimals: SOL.decimals,
+    version: 4
+  },
+  'YFI-USDT-V4': {
+    symbol: 'YFI-USDT',
+    name: 'YFI-USDT LP',
+    coin: { ...SPL_TOKENS.YFI },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'FA1i7fej1pAbQbnY8NbyYUsTrWcasTyipKreDgy1Mgku',
+    decimals: SPL_TOKENS.YFI.decimals,
+    version: 4
+  },
+  'SRM-USDT-V4': {
+    symbol: 'SRM-USDT',
+    name: 'SRM-USDT LP',
+    coin: { ...SPL_TOKENS.SRM },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'HYSAu42BFejBS77jZAZdNAWa3iVcbSRJSzp3wtqCbWwv',
+    decimals: SPL_TOKENS.SRM.decimals,
+    version: 4
+  },
+  'FTT-USDT-V4': {
+    symbol: 'FTT-USDT',
+    name: 'FTT-USDT LP',
+    coin: { ...SPL_TOKENS.FTT },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: '2cTCiUnect5Lap2sk19xLby7aajNDYseFhC9Pigou11z',
+    decimals: SPL_TOKENS.FTT.decimals,
+    version: 4
+  },
+  'BTC-USDT-V4': {
+    symbol: 'BTC-USDT',
+    name: 'BTC-USDT LP',
+    coin: { ...SPL_TOKENS.BTC },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'DgGuvR9GSHimopo3Gc7gfkbKamLKrdyzWkq5yqA6LqYS',
+    decimals: SPL_TOKENS.BTC.decimals,
+    version: 4
+  },
+  'SUSHI-USDT-V4': {
+    symbol: 'SUSHI-USDT',
+    name: 'SUSHI-USDT LP',
+    coin: { ...SPL_TOKENS.SUSHI },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'Ba26poEYDy6P2o95AJUsewXgZ8DM9BCsmnU9hmC9i4Ki',
+    decimals: SPL_TOKENS.SUSHI.decimals,
+    version: 4
+  },
+  'TOMO-USDT-V4': {
+    symbol: 'TOMO-USDT',
+    name: 'TOMO-USDT LP',
+    coin: { ...SPL_TOKENS.TOMO },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'D3iGro1vn6PWJXo9QAPj3dfta6dKkHHnmiiym2EfsAmi',
+    decimals: SPL_TOKENS.TOMO.decimals,
+    version: 4
+  },
+  'LINK-USDT-V4': {
+    symbol: 'LINK-USDT',
+    name: 'LINK-USDT LP',
+    coin: { ...SPL_TOKENS.LINK },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'Dr12Sgt9gkY8WU5tRkgZf1TkVWJbvjYuPAhR3aDCwiiX',
+    decimals: SPL_TOKENS.LINK.decimals,
+    version: 4
+  },
+  'ETH-USDT-V4': {
+    symbol: 'ETH-USDT',
+    name: 'ETH-USDT LP',
+    coin: { ...SPL_TOKENS.ETH },
+    pc: { ...SPL_TOKENS.USDT },
+
+    mint: 'nPrB78ETY8661fUgohpuVusNCZnedYCgghzRJzxWnVb',
+    decimals: SPL_TOKENS.ETH.decimals,
+    version: 4
+  },
+  'YFI-SRM-V4': {
+    symbol: 'YFI-SRM',
+    name: 'YFI-SRM LP',
+    coin: { ...SPL_TOKENS.YFI },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: 'EGJht91R7dKpCj8wzALkjmNdUUUcQgodqWCYweyKcRcV',
+    decimals: SPL_TOKENS.YFI.decimals,
+    version: 4
+  },
+  'FTT-SRM-V4': {
+    symbol: 'FTT-SRM',
+    name: 'FTT-SRM LP',
+    coin: { ...SPL_TOKENS.FTT },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: 'AsDuPg9MgPtt3jfoyctUCUgsvwqAN6RZPftqoeiPDefM',
+    decimals: SPL_TOKENS.FTT.decimals,
+    version: 4
+  },
+  'BTC-SRM-V4': {
+    symbol: 'BTC-SRM',
+    name: 'BTC-SRM LP',
+    coin: { ...SPL_TOKENS.BTC },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: 'AGHQxXb3GSzeiLTcLtXMS2D5GGDZxsB2fZYZxSB5weqB',
+    decimals: SPL_TOKENS.BTC.decimals,
+    version: 4
+  },
+  'SUSHI-SRM-V4': {
+    symbol: 'SUSHI-SRM',
+    name: 'SUSHI-SRM LP',
+    coin: { ...SPL_TOKENS.SUSHI },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: '3HYhUnUdV67j1vn8fu7ExuVGy5dJozHEyWvqEstDbWwE',
+    decimals: SPL_TOKENS.SUSHI.decimals,
+    version: 4
+  },
+  'TOMO-SRM-V4': {
+    symbol: 'TOMO-SRM',
+    name: 'TOMO-SRM LP',
+    coin: { ...SPL_TOKENS.TOMO },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: 'GgH9RnKrQpaMQeqmdbMvs5oo1A24hERQ9wuY2pSkeG7x',
+    decimals: SPL_TOKENS.TOMO.decimals,
+    version: 4
+  },
+  'LINK-SRM-V4': {
+    symbol: 'LINK-SRM',
+    name: 'LINK-SRM LP',
+    coin: { ...SPL_TOKENS.LINK },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: 'GXN6yJv12o18skTmJXaeFXZVY1iqR18CHsmCT8VVCmDD',
+    decimals: SPL_TOKENS.LINK.decimals,
+    version: 4
+  },
+  'ETH-SRM-V4': {
+    symbol: 'ETH-SRM',
+    name: 'ETH-SRM LP',
+    coin: { ...SPL_TOKENS.ETH },
+    pc: { ...SPL_TOKENS.SRM },
+
+    mint: '9VoY3VERETuc2FoadMSYYizF26mJinY514ZpEzkHMtwG',
+    decimals: SPL_TOKENS.ETH.decimals,
+    version: 4
+  },
+  'SRM-SOL-V4': {
+    symbol: 'SRM-SOL',
+    name: 'SRM-SOL LP',
+    coin: { ...SPL_TOKENS.SRM },
+    pc: { ...SOL },
+
+    mint: 'AKJHspCwDhABucCxNLXUSfEzb7Ny62RqFtC9uNjJi4fq',
+    decimals: SPL_TOKENS.SRM.decimals,
+    version: 4
+  },
+  'STEP-USDC-V4': {
+    symbol: 'STEP-USDC',
+    name: 'STEP-USDC LP',
+    coin: { ...SPL_TOKENS.STEP },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '3k8BDobgihmk72jVmXYLE168bxxQUhqqyESW4dQVktqC',
+    decimals: SPL_TOKENS.STEP.decimals,
+    version: 4
+  },
+  'MEDIA-USDC-V4': {
+    symbol: 'MEDIA-USDC',
+    name: 'MEDIA-USDC LP',
+    coin: { ...SPL_TOKENS.MEDIA },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'A5zanvgtioZGiJMdEyaKN4XQmJsp1p7uVxaq2696REvQ',
+    decimals: SPL_TOKENS.MEDIA.decimals,
+    version: 4
+  },
+  'ROPE-USDC-V4': {
+    symbol: 'ROPE-USDC',
+    name: 'ROPE-USDC LP',
+    coin: { ...SPL_TOKENS.ROPE },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'Cq4HyW5xia37tKejPF2XfZeXQoPYW6KfbPvxvw5eRoUE',
+    decimals: SPL_TOKENS.ROPE.decimals,
+    version: 4
+  },
+  'MER-USDC-V4': {
+    symbol: 'MER-USDC',
+    name: 'MER-USDC LP',
+    coin: { ...SPL_TOKENS.MER },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '3H9NxvaZoxMZZDZcbBDdWMKbrfNj7PCF5sbRwDr7SdDW',
+    decimals: SPL_TOKENS.MER.decimals,
+    version: 4
+  },
+  'COPE-USDC-V4': {
+    symbol: 'COPE-USDC',
+    name: 'COPE-USDC LP',
+    coin: { ...SPL_TOKENS.COPE },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'Cz1kUvHw98imKkrqqu95GQB9h1frY8RikxPojMwWKGXf',
+    decimals: SPL_TOKENS.COPE.decimals,
+    version: 4
+  },
+  'ALEPH-USDC-V4': {
+    symbol: 'ALEPH-USDC',
+    name: 'ALEPH-USDC LP',
+    coin: { ...SPL_TOKENS.ALEPH },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: 'iUDasAP2nXm5wvTukAHEKSdSXn8vQkRtaiShs9ceGB7',
+    decimals: SPL_TOKENS.ALEPH.decimals,
+    version: 4
+  },
+  'TULIP-USDC-V4': {
+    symbol: 'TULIP-USDC',
+    name: 'TULIP-USDC LP',
+    coin: { ...SPL_TOKENS.TULIP },
+    pc: { ...SPL_TOKENS.USDC },
+
+    mint: '2doeZGLJyACtaG9DCUyqMLtswesfje1hjNA11hMdj6YU',
+    decimals: SPL_TOKENS.TULIP.decimals,
+    version: 4
+  }
+};

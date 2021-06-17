@@ -24,6 +24,7 @@
     ]
   },
   "scripts": {
+    "lint:fix": "tsdx lint src --fix",
     "lint": "tsdx lint src",
     "build": "tsdx build",
     "json": "node scripts/build.js",
